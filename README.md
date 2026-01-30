@@ -2,9 +2,7 @@
 
 ## Install Packages by brew
 
-```bash
-sudo pacman -S --needed zsh ghostty eza zoxide fzf ripgrep flatpak fcitx5-im fcitx5-rime neovim yazi ffmpeg 7zip jq poppler fd resvg imagemagick git base-devel vivaldi stow starship zed bat dust bottom fastfetch obsidian tabiew dysk github-cli usbutils fnm
-```
+### Packages
 
 ```bash
 brew install mac-mouse-fix
@@ -19,8 +17,14 @@ brew install starship
 brew install bat fastfetch
 brew install fnm
 brew install --cask claude-code
-brew install --cask font-jetbrains-mono-nerd-font
 brew install gh
+```
+
+### Fonts
+
+```bash
+brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask font-source-han-sans-vf
 ```
 
 ## Install by Download
@@ -33,3 +37,7 @@ brew install gh
 - MS Office
 
 ## Stow Manage config
+
+```
+
+```

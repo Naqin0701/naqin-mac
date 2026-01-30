@@ -1,0 +1,13 @@
+[http]
+	proxy = http://127.0.0.1:7897
+[https]
+	proxy = http://127.0.0.1:7897
+[user]
+	email = naqin0701@gmail.com
+	name = Naqin
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
