@@ -48,4 +48,5 @@ stow ghostty
 stow git
 stow starship
 stow zsh
+stow conda
 ```
