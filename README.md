@@ -29,6 +29,8 @@ brew install --cask pearcleaner
 ```bash
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-source-han-sans-vf
+brew install --cask font-maple-mono-cn
+brew install --cask font-lxgw-wenkai
 ```
 
 ## Install by Download
