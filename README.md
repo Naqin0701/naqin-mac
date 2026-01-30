@@ -25,6 +25,7 @@ brew install --cask pearcleaner
 brew install --cask mactex-no-gui
 brew install --cask skim
 brew install --cask iina
+brew install --cask notesnook
 ```
 
 ### Fonts
