@@ -65,23 +65,6 @@ function z() {
         __zoxide_z "$@"
     fi
 }
-# Mac-like open command
-function open() {
-    if [[ $# -eq 0 ]]; then
-        # No arguments → open current directory
-        xdg-open . >/dev/null 2>&1
-        return
-    fi
-
-    local file
-    for file in "$@"; do
-        if [[ -e "$file" || "$file" =~ ^(https?|ftp):// ]]; then
-            xdg-open "$file" >/dev/null 2>&1 &
-        else
-            print -u2 "open: cannot access '$file': No such file or directory"
-        fi
-    done
-}
 function startconda() {
     source ~/miniforge3/etc/profile.d/conda.sh
     eval "$(mamba shell hook --shell zsh)"
