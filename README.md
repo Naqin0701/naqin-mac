@@ -23,6 +23,8 @@ brew install --cask obsidian
 brew install --cask karabiner-elements
 brew install --cask pearcleaner
 brew install --cask mactex-no-gui
+brew install --cask skim
+brew install --cask iina
 ```
 
 ### Fonts
@@ -32,6 +34,8 @@ brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-source-han-sans-vf
 brew install --cask font-maple-mono-cn
 brew install --cask font-lxgw-wenkai
+#  For Reading
+brew install --cask font-atkinson-hyperlegible
 ```
 
 ## Install by Download
@@ -42,6 +46,7 @@ brew install --cask font-lxgw-wenkai
 - Clash Verge
 - Shottr
 - MS Office
+- Keynote, Pages, Numbers
 
 ## Stow Manage config
 
