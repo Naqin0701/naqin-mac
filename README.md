@@ -60,3 +60,53 @@ stow starship
 stow zsh
 stow conda
 ```
+
+## Age usage
+
+### Encrypt / Decrypt a Single File (Passphrase mode)
+
+**Encrypt** a file.
+
+```bash
+age -p secret.txt > secret.txt.age
+# or with output file
+age -p -o secret.txt.age secret.txt
+```
+
+**Decrypt** a file.
+
+```bash
+age -d secret.txt.age > secret-decrypted.txt
+# or overwrite original (careful!)
+age -d -o secret.txt secret.txt.age
+```
+
+### Encrypt / Decrypt a Folder (Standard Workflow)
+
+**Step 1: Pack the folder** (use tar + compression)
+
+```bash
+# Good compression (gzip)
+tar czf myfolder.tar.gz myfolder/
+
+# Better compression (xz – smaller file)
+tar cJf myfolder.tar.xz myfolder/
+```
+
+**Step 2:** Encrypt the archive
+
+```bash
+age -p myfolder.tar.gz > myfolder.tar.gz.age
+# or
+age -p -o myfolder.tar.gz.age myfolder.tar.gz
+```
+
+**Step 3:** Decrypt + Unpack
+
+```bash
+# Decrypt
+age -d myfolder.tar.gz.age > myfolder.tar.gz
+
+# Unpack
+tar xzf myfolder.tar.gz
+```
