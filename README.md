@@ -26,6 +26,8 @@ brew install --cask mactex-no-gui
 brew install --cask skim
 brew install --cask iina
 brew install age
+brew tap farion1231/ccswitch
+brew install --cask cc-switch
 ```
 
 ### Fonts
