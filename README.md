@@ -22,6 +22,7 @@ brew install --cask zotero
 brew install --cask obsidian
 brew install --cask karabiner-elements
 brew install --cask pearcleaner
+brew install --cask mactex-no-gui
 ```
 
 ### Fonts
