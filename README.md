@@ -20,6 +20,8 @@ brew install --cask claude-code
 brew install gh
 brew install --cask zotero
 brew install --cask obsidian
+brew install --cask karabiner-elements
+brew install --cask pearcleaner
 ```
 
 ### Fonts
@@ -40,6 +42,10 @@ brew install --cask font-source-han-sans-vf
 
 ## Stow Manage config
 
-```
-
+```bash
+stow eza
+stow ghostty
+stow git
+stow starship
+stow zsh
 ```
