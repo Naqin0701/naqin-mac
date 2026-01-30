@@ -18,6 +18,8 @@ brew install bat fastfetch
 brew install fnm
 brew install --cask claude-code
 brew install gh
+brew install --cask zotero
+brew install --cask obsidian
 ```
 
 ### Fonts
