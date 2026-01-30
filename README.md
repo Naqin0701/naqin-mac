@@ -6,6 +6,7 @@
 sudo pacman -S --needed zsh ghostty eza zoxide fzf ripgrep flatpak fcitx5-im fcitx5-rime neovim yazi ffmpeg 7zip jq poppler fd resvg imagemagick git base-devel vivaldi stow starship zed bat dust bottom fastfetch obsidian tabiew dysk github-cli usbutils fnm
 ```
 
+```bash
 brew install mac-mouse-fix
 brew install --cask raycast
 brew install --cask ghostty
@@ -18,6 +19,9 @@ brew install starship
 brew install bat fastfetch
 brew install fnm
 brew install --cask claude-code
+brew install --cask font-jetbrains-mono-nerd-font
+brew install gh
+```
 
 ## Install by Download
 
