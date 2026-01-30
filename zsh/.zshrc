@@ -40,8 +40,6 @@ alias grep='grep --color=auto'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-alias zed="zeditor"
-
 # -----------------
 # Environment variables (optional)
 # -----------------

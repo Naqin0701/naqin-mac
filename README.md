@@ -48,6 +48,7 @@ brew install --cask font-atkinson-hyperlegible
 - Shottr
 - MS Office
 - Keynote, Pages, Numbers
+- Endnote 2025 Mac
 
 ## Stow Manage config
 
