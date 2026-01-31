@@ -28,6 +28,7 @@ brew install --cask iina
 brew install age
 brew tap farion1231/ccswitch
 brew install --cask cc-switch
+brew install tmux
 ```
 
 ### Fonts
@@ -111,4 +112,10 @@ age -d myfolder.tar.gz.age > myfolder.tar.gz
 
 # Unpack
 tar xzf myfolder.tar.gz
+```
+
+## Install LazyVim
+
+```bash
+git clone https://github.com/LazyVim/starter ~/.config/nvim
 ```
