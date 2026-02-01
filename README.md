@@ -29,6 +29,7 @@ brew install age
 brew tap farion1231/ccswitch
 brew install --cask cc-switch
 brew install tmux
+brew install --cask jordanbaird-ice
 ```
 
 ### Fonts
