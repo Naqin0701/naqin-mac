@@ -1,14 +1,25 @@
 # ╔═══════════════════════════════════════════════════════════════════════════╗
 # ║                                                                           ║
-# ║                              ZSH Configuration                            ║
+# ║                            Shell Options                                   ║
 # ║                                                                           ║
 # ╚═══════════════════════════════════════════════════════════════════════════╝
 
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-# ┃                           Source Configuration Files                      ┃
+# ┃                           Directory Navigation                            ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-# Source all configuration files from ~/.zsh directory
-for config_file in "$HOME/.zsh/"*.zsh; do
-  source "${config_file}"
-done
+# Type directory name to cd into it
+setopt AUTO_CD
+
+# cd automatically pushes directories to stack
+setopt AUTO_PUSHD
+
+# Ignore duplicates in directory stack
+setopt PUSHD_IGNORE_DUPS
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                             Globbing Patterns                             ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+# Enable extended globbing patterns
+setopt EXTENDED_GLOB
