@@ -41,16 +41,23 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # -----------------
-# Environment variables (optional)
+# Environment variables
 # -----------------
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+# proxy
 export http_proxy=http://127.0.0.1:7897
 export https_proxy=http://127.0.0.1:7897
 export all_proxy=sockes5://127.0.0.1:7897
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# golang
+export PATH="$PATH:$(go env GOPATH)/bin"
 
-
-# functions
+# -----------------
+# Functions
+# -----------------
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
@@ -98,4 +105,6 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
+# bun completions
+[ -s "/Users/naqin/.bun/_bun" ] && source "/Users/naqin/.bun/_bun"
 
