@@ -54,6 +54,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # golang
 export PATH="$PATH:$(go env GOPATH)/bin"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # -----------------
 # Functions
