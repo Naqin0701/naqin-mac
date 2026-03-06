@@ -31,6 +31,7 @@ brew install --cask cc-switch
 brew install tmux
 brew install --cask jordanbaird-ice
 brew install pandoc
+brew install bottom
 ```
 
 ### Fonts
