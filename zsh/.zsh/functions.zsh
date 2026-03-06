@@ -39,3 +39,12 @@ function startconda() {
     source ~/miniforge3/etc/profile.d/conda.sh
     eval "$(mamba shell hook --shell zsh)"
 }
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                         Copy PWD to Clipboard                              ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+# Copy current working directory to system clipboard (no trailing newline)
+function cpwd() {
+    printf '%s' "$PWD" | pbcopy
+}
