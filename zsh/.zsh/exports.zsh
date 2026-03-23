@@ -42,3 +42,5 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 # XDG configuration home directory
 export XDG_CONFIG_HOME="$HOME/.config"
+
+export EDITOR=nvim
