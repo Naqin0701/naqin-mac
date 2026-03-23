@@ -116,3 +116,17 @@ age -d myfolder.tar.gz.age > myfolder.tar.gz
 # Unpack
 tar xzf myfolder.tar.gz
 ```
+
+### Yabai Installation
+
+经过考虑，还是决定安装yabai，传统的窗口管理体验实在是太拉胯了，我真的忍无可忍。
+
+```bash
+# install yabai
+brew install asmvik/formulae/yabai
+# install sketchybar
+brew tap FelixKratz/formulae
+brew install sketchybar
+# install skhd
+brew install asmvik/formulae/skhd
+```
