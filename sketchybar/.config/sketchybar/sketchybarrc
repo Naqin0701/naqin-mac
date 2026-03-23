@@ -5,8 +5,8 @@ sketchybar --bar position=top height=25 color=0x00000000
 
 ##### 全局默认样式 #####
 default=(
-  icon.font="JetBrains Mono Nerd Font:Regular:15.0"
-  label.font="Hack Nerd Font:Regular:12.0"
+  icon.font="JetBrainsMono Nerd Font:Regular:15.0"
+  label.font="JetBrainsMono Nerd Font:Regular:12.0"
   icon.color=0xffe0def4
   label.color=0xffe0def4
   icon.padding_left=4
@@ -20,25 +20,45 @@ sketchybar --default "${default[@]}"
 SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
 for i in "${!SPACE_ICONS[@]}"; do
   sid="$(($i+1))"
-  sketchybar --add group space."$sid" left
-  space_item=(
+  space=(
     space="$sid"
     icon="${SPACE_ICONS[i]}"
-    icon.padding_left=6
-    icon.padding_right=6
+    icon.padding_left=10
+    icon.padding_right=10
     background.color=0xff232136
     background.corner_radius=4
     background.height=22
+    background.borderwidth=1
+    background.padding_left=3
+    background.padding_right=3
     label.drawing=off
     script="$PLUGIN_DIR/space.sh"
     click_script="yabai -m space --focus $sid"
   )
-  sketchybar --add item space."$sid" left \
-    --set space."$sid" "${space_item[@]}"
+  sketchybar --add space space."$sid" left --set space."$sid" "${space[@]}"
 done
 
+# SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
+# for i in "${!SPACE_ICONS[@]}"
+# do
+#   sid="$(($i+1))"
+#   space=(
+#     space="$sid"
+#     icon="${SPACE_ICONS[i]}"
+#     icon.padding_left=7
+#     icon.padding_right=7
+#     background.color=0x40ffffff
+#     background.corner_radius=5
+#     background.height=25
+#     label.drawing=off
+#     script="$PLUGIN_DIR/space.sh"
+#     click_script="yabai -m space --focus $sid"
+#   )
+#   sketchybar --add space space."$sid" left --set space."$sid" "${space[@]}"
+# done
+
 ##### 常用 App 组（右侧）#####
-APPS=("WeChat:WeChat:W" "Obsidian:Obsidian:Ob" "Vivaldi:Vivaldi:Vi" "Ghostty:Ghostty:Gt")
+APPS=("WeChat:WeChat:" "Obsidian:Obsidian:" "Vivaldi:Vivaldi:" "Ghostty:Ghostty:")
 for app_info in "${APPS[@]}"; do
   app_name="${app_info%%:*}"
   rest="${app_info#*:}"
@@ -52,6 +72,7 @@ for app_info in "${APPS[@]}"; do
       background.color=0xff232136 \
       background.corner_radius=4 \
       background.height=22 \
+      background.borderwidth=1 \
       icon.padding_left=6 \
       icon.padding_right=6 \
       script="$PLUGIN_DIR/space.sh" \
@@ -61,15 +82,18 @@ done
 ##### 日历（右侧）#####
 sketchybar --add item calendar right \
   --set calendar \
-    icon=cal \
-    label.drawing=off \
+    icon= \
+    label.drawing=on \
+    label.color=0xff908c99 \
     background.color=0xff232136 \
     background.corner_radius=4 \
     background.height=22 \
+    background.borderwidth=1 \
     padding_left=6 \
     padding_right=6 \
     script="$PLUGIN_DIR/calendar.sh" \
-    click_script="open -a Calendar"
+    click_script="open -a Calendar" \
+    update_freq=3600
 
 ##### 时钟（右侧）#####
 sketchybar --add item clock right \
@@ -79,6 +103,7 @@ sketchybar --add item clock right \
     background.color=0xff232136 \
     background.corner_radius=4 \
     background.height=22 \
+    background.borderwidth=1 \
     padding_left=6 \
     padding_right=6 \
     update_freq=30 \

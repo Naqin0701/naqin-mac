@@ -6,7 +6,7 @@
 
 CARD_BG_SELECTED="0x66c4a7e7"  # 选中：40% 不透明紫罗兰
 CARD_BG_INACTIVE="0xff232136"   # 未选中：卡片背景
-ICON_COLOR_SELECTED="0xffe0def4"  # 选中：主文字色
+ICON_COLOR_SELECTED="0xff232136"  # 选中：主文字色
 ICON_COLOR_INACTIVE="0xff6e6a86"  # 未选中：淡化文字色
 
 if [ "$SELECTED" = "true" ]; then
