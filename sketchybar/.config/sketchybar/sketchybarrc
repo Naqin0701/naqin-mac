@@ -38,12 +38,15 @@ for i in "${!SPACE_ICONS[@]}"; do
 done
 
 ##### 常用 App 组（右侧）#####
-APPS=("WeChat:WeChat" "Obsidian:Obsidian" "Vivaldi:Vivaldi" "Ghostty:Ghostty")
+APPS=("WeChat:WeChat:W" "Obsidian:Obsidian:Ob" "Vivaldi:Vivaldi:Vi" "Ghostty:Ghostty:Gt")
 for app_info in "${APPS[@]}"; do
   app_name="${app_info%%:*}"
-  app_bundle="${app_info##*:}"
+  rest="${app_info#*:}"
+  app_bundle="${rest%%:*}"
+  app_icon="${rest##*:}"
   sketchybar --add item "$app_name" right \
     --set "$app_name" \
+      icon="$app_icon" \
       icon.drawing=on \
       label.drawing=off \
       background.color=0xff232136 \
