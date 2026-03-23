@@ -45,11 +45,12 @@ for app_info in "${APPS[@]}"; do
   sketchybar --add item "$app_name" right \
     --set "$app_name" \
       icon.drawing=on \
+      label.drawing=off \
       background.color=0xff232136 \
       background.corner_radius=4 \
       background.height=22 \
-      padding_left=6 \
-      padding_right=6 \
+      icon.padding_left=6 \
+      icon.padding_right=6 \
       script="$PLUGIN_DIR/space.sh" \
       click_script="open -a '$app_bundle'"
 done
