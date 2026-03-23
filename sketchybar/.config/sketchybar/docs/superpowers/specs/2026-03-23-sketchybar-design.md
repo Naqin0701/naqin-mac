@@ -85,7 +85,7 @@
 - **背景色**：`#232136`
 - **显示内容**：App 图标（SF Symbols 或 Nerd Font）
 - **图标颜色**：`#e0def4`
-- **悬停/点击**：文字颜色变为 `#c4a7e7`
+- **悬停/点击**：图标颜色变为 `#c4a7e7`
 - **点击脚本**：`open -a "WeChat"` 等对应 App Bundle ID
 
 | App | Bundle ID / 启动命令 |
