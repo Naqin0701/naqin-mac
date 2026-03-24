@@ -1,7 +1,8 @@
 local colors = require("colors")
 local sbar = require("sketchybar")
 
-local date = sbar.add("item", "widgets.date", "right", {
+local date = sbar.add("item", "widgets.date", {
+  position = "right",
   update_freq = 60,  -- 每分钟更新
   icon = {
     drawing = false,

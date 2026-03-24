@@ -5,7 +5,9 @@
 local sbar = require("sketchybar")
 
 -- 添加配置目录到 require 路径
-package.cpath = package.cpath .. ";/Users/" .. os.getenv("USER") .. "/.local/share/sketchybar_lua/?.so"-- ── 全局外观 ─────────────────────────────────────────────
+package.cpath = package.cpath .. ";/Users/" .. os.getenv("USER") .. "/.local/share/sketchybar_lua/?.so"
+
+-- ── 全局外观 ─────────────────────────────────────────────
 require("bar")      -- bar 基础属性（高度、颜色等）
 require("default")  -- item 默认属性
 

@@ -4,12 +4,14 @@ local sbar = require("sketchybar")
 local NUM_SPACES = 9
 
 -- 创建分隔用的左侧 padding
-sbar.add("item", "spaces.padding", "left", {
+sbar.add("item", "spaces.padding", {
+  position = "left",
   width = 4,
 })
 
 for i = 1, NUM_SPACES do
-  local space = sbar.add("space", "space." .. i, "left", {
+  local space = sbar.add("space", "space." .. i, {
+    position = "left",
     space = i,
     icon = {
       string = tostring(i),

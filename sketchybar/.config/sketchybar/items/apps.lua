@@ -41,7 +41,8 @@ local app_list = {
 }
 
 -- 分隔线（app 区域与时钟之间）
-sbar.add("item", "apps.separator", "right", {
+sbar.add("item", "apps.separator", {
+  position = "right",
   icon = {
     string        = "|",
     color         = colors.fg_dim,
@@ -55,7 +56,8 @@ sbar.add("item", "apps.separator", "right", {
 -- 生成 App 快捷方式（倒序，因为 right 从右往左排）
 for i = #app_list, 1, -1 do
   local entry = app_list[i]
-  local item = sbar.add("item", entry.name, "right", {
+  local item = sbar.add("item", entry.name, {
+    position = "right",
     icon = {
       string = entry.icon,
       font = {
