@@ -61,10 +61,13 @@ for i = 1, 10 do
 
   space:subscribe("space_change", function(env)
     local selected = env.SELECTED == "true"
+    local f = io.popen("date '+%H:%M'")
+    local time_str = f:read("*a"):gsub("\n", "")
+    f:close()
     space:set({
       background = { color = selected and 0x66c4a7e7 or 0xff232136 },
       icon       = { color = selected and 0xff232136 or 0xff6e6a86 },
-      label      = os.execute("date '+%H:%M'") or "",
+      label      = time_str,
     })
   end)
 end
@@ -114,22 +117,14 @@ local calendar = sbar.add("item", "calendar", {
   },
   padding_left  = 6,
   padding_right = 6,
-  update_freq   = 3600,
+  script        = "CONFIG_DIR/plugins/calendar.sh",
+  update_freq   = 60,
 })
 
-calendar:set({
-  click_script = [[
-    local f = io.popen("date '+%d/%m %b'")
-    local date = f:read("*a"):gsub("\n", "")
-    f:close()
-    sbar.items["calendar"]:set({ label = date })
-  ]],
-})
-
--------------------------------------------------------
--- 时钟（右侧）
--------------------------------------------------------
 local clock = sbar.add("item", "clock", {
+  icon = {
+    drawing = false,
+  },
   background = {
     color        = 0xff232136,
     corner_radius = 4,
@@ -143,22 +138,17 @@ local clock = sbar.add("item", "clock", {
   },
   padding_left  = 6,
   padding_right = 6,
+  script        = "CONFIG_DIR/plugins/clock.sh",
   update_freq   = 30,
-})
-
-clock:set({
-  click_script = [[
-    local f = io.popen("date '+%H:%M'")
-    local time = f:read("*a"):gsub("\n", "")
-    f:close()
-    sbar.items["clock"]:set({ label = time })
-  ]],
 })
 
 -------------------------------------------------------
 -- 前台应用显示（右侧）
 -------------------------------------------------------
 local front_app = sbar.add("item", "front_app", {
+  icon = {
+    drawing = false,
+  },
   label = {
     color         = 0xffe0def4,
     padding_left  = 6,
