@@ -8,7 +8,7 @@ local clock = sbar.add("item", "widgets.clock", {
     drawing = false,
   },
   label = {
-    string = "%H:%M",  -- 24 小时制，如需 12 小时改为 %I:%M %p
+    string = os.date("%H:%M"),
     font = {
       family = "SF Pro",
       style  = "Semibold",
@@ -24,6 +24,15 @@ local clock = sbar.add("item", "widgets.clock", {
   padding_left  = 4,
   padding_right = 4,
 })
+
+-- 初始化时设置时间
+clock:subscribe("forced", function(_)
+  clock:set({
+    label = {
+      string = os.date("%H:%M"),
+    },
+  })
+end)
 
 -- 每次刷新时更新时钟
 clock:subscribe("update", function(_)

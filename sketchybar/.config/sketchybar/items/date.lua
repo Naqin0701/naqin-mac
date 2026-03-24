@@ -3,21 +3,21 @@ local sbar = require("sketchybar")
 
 local date = sbar.add("item", "widgets.date", {
   position = "right",
-  update_freq = 60,  -- 每分钟更新
+  update_freq = 60,
   icon = {
-    drawing = false,
-  },
-  label = {
-    string = "%m/%d %a",  -- 格式：03/24 Mon
+    string = os.date("%m/%d"),
     font = {
       family = "SF Pro",
       style  = "Regular",
       size   = 13,
     },
-    color = colors.fg_dim,
+    color = colors.fg,
+  },
+  label = {
+    drawing = false,
   },
   background = {
-    color         = colors.transparent,
+    color         = colors.bg_dim,
     corner_radius = 6,
     height        = 26,
   },
@@ -25,11 +25,10 @@ local date = sbar.add("item", "widgets.date", {
   padding_right = 4,
 })
 
--- 每次刷新时更新日期
 date:subscribe("update", function(_)
   date:set({
-    label = {
-      string = os.date("%m/%d %a"),
+    icon = {
+      string = os.date("%m/%d"),
     },
   })
 end)
