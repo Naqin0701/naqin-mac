@@ -3,6 +3,7 @@
 -- Load SbarLua
 package.cpath = package.cpath .. ";" .. os.getenv("HOME") .. "/.local/share/sketchybar_lua/?.so"
 local sbar = require("sketchybar")
+local CONFIG_DIR = os.getenv("CONFIG_DIR")
 
 -------------------------------------------------------
 -- Bar底座
@@ -92,6 +93,7 @@ for _, app in ipairs(apps) do
       border_width = 1,
     },
     icon = {
+      drawing       = true,
       padding_left  = 6,
       padding_right = 6,
     },
@@ -117,8 +119,8 @@ local calendar = sbar.add("item", "calendar", {
   },
   padding_left  = 6,
   padding_right = 6,
-  script        = "CONFIG_DIR/plugins/calendar.sh",
-  update_freq   = 60,
+  script        = CONFIG_DIR .. "/plugins/calendar.sh",
+  update_freq   = 3600,
 })
 
 local clock = sbar.add("item", "clock", {
@@ -138,7 +140,7 @@ local clock = sbar.add("item", "clock", {
   },
   padding_left  = 6,
   padding_right = 6,
-  script        = "CONFIG_DIR/plugins/clock.sh",
+  script        = CONFIG_DIR .. "/plugins/clock.sh",
   update_freq   = 30,
 })
 
