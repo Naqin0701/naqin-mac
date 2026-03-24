@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# sketchybar 配置入口脚本
+# 由 sketchybar 自动调用
+
+CONFIG_DIR="$HOME/.config/sketchybar"
+
+# 使用 sbarlua 运行 lua 配置
+# sbarlua 会自动查找 init.lua
+"$CONFIG_DIR/init.lua" "$CONFIG_DIR"
