@@ -1,4 +1,5 @@
 local colors = require("colors")
+local sbar = require("sketchybar")
 
 -- Bar 整体外观设置
 sbar.bar({

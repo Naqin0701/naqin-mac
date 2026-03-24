@@ -1,4 +1,5 @@
 local colors = require("colors")
+local sbar = require("sketchybar")
 
 -- 常用软件快捷方式
 -- 修改此列表来定制你的 App 快捷方式

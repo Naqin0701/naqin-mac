@@ -1,4 +1,5 @@
 local colors = require("colors")
+local sbar = require("sketchybar")
 
 local clock = sbar.add("item", "widgets.clock", "right", {
   update_freq = 10,  -- 每 10 秒更新

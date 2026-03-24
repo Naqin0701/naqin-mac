@@ -1,4 +1,5 @@
 local colors = require("colors")
+local sbar = require("sketchybar")
 
 -- 所有 item 的默认属性
 sbar.default({

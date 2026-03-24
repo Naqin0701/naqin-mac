@@ -1,5 +1,5 @@
 local colors = require("colors")
-
+local sbar = require("sketchybar")
 -- 工作区数量（按需调整）
 local NUM_SPACES = 9
 
