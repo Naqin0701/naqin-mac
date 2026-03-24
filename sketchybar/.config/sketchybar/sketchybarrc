@@ -1,2 +1,0 @@
-#!/bin/sh
-sketchybar -c "$CONFIG_DIR/init.lua"
