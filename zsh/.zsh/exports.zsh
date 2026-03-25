@@ -11,6 +11,8 @@
 # User binaries
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+# opencode
+export PATH=/Users/naqin/.opencode/bin:$PATH
 
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 # ┃                              Proxy Settings                                ┃
