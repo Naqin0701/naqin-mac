@@ -8,7 +8,7 @@ local default_item = {
 	-- always the left object
 	icon = {
 		font = {
-			family = "Hack Nerd Font",
+			family = "JetBrainsMono Nerd Font",
 			size = size,
 		},
 		color = COLORS.accent_color,

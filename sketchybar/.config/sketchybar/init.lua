@@ -26,7 +26,6 @@ spaces_loader:subscribe("aerospace_is_ready", function()
 	SBAR.begin_config()
 	require("items.spaces")
 	separator_module.create("resources_separator")
-	require("items.resources")
 	SBAR.end_config()
 end)
 
