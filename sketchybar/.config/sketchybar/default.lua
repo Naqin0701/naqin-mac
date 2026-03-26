@@ -1,8 +1,8 @@
 local border_width = 1
-local corner_raduis = 15
+local corner_raduis = 3
 local item_padding = 10
 local height = 25
-local size = 11.0
+local size = 11.5
 -- Define default item properties
 local default_item = {
 	-- always the left object
