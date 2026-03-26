@@ -11,7 +11,7 @@ if handle then
 end
 
 local cpu = SBAR.add("item", "cpu", {
-	position = "left",
+	position = "right",
 	update_freq = 2,
 	icon = {
 		string = "􀧓",
@@ -39,7 +39,7 @@ cpu:subscribe("routine", cpu_update)
 -- ==========================================================
 
 local memory = SBAR.add("item", "memory", {
-	position = "left",
+	position = "right",
 	update_freq = 5,
 	icon = {
 		string = "􀫦",

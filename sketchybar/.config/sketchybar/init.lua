@@ -4,14 +4,11 @@ SBAR.begin_config() -- Pauses redraw for faster loading
 
 local separator_module = require("items.separator")
 
--- Left Side
-require("items.menus")
-separator_module.create("menu_separator")
+-- Left Side (spaces loaded via delayed loader)
 
 -- Right Side (Order: Right -> Left)
 require("items.theme_picker")
 require("items.calendar")
-require("items.control_center")
 require("items.volume")
 require("items.pomodoro")
 

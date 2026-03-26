@@ -2,7 +2,7 @@ local border_width = 1
 local corner_raduis = 15
 local item_padding = 10
 local height = 25
-local size = 13.5
+local size = 11.0
 -- Define default item properties
 local default_item = {
 	-- always the left object
@@ -19,7 +19,7 @@ local default_item = {
 	-- always the right object
 	label = {
 		font = {
-			family = "Hack Nerd Font",
+			family = "JetBrainsMono Nerd Font",
 			style = "Semibold",
 			size = size,
 		},
@@ -49,7 +49,7 @@ SBAR.default({ background = { drawing = false } })
 SBAR.bar({
 	-- position = "top",
 	height = height,
-	blur_radius = 30,
+	blur_radius = 0,
 })
 
 return default_item

@@ -122,10 +122,6 @@ end
 
 -- Fetch window list for one workspace, then call apply_space.
 local function fetch_and_apply(workspace_id)
-	if not APPLICATION_MENU_COLLAPSED then
-		return
-	end
-
 	local focused = current_focused_workspace
 	if not focused then
 		return
@@ -227,9 +223,6 @@ if handle then
 		end)
 
 		space:subscribe({ "mouse.entered", "mouse.exited" }, function(env)
-			if not APPLICATION_MENU_COLLAPSED then
-				return
-			end
 			local is_entering = (env.SENDER == "mouse.entered")
 			local is_this_focused = (workspace_id == current_focused_workspace)
 			if not is_this_focused then
@@ -324,9 +317,7 @@ local function update_front_app()
 				icon = { string = icon_map[name] or icon_map["Default"] or "APP" },
 				label = { string = name },
 			})
-			if APPLICATION_MENU_COLLAPSED then
-				space_separator:set({ drawing = true })
-			end
+			space_separator:set({ drawing = true })
 		else
 			front_app:set({ drawing = false })
 			space_separator:set({ drawing = false })
