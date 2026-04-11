@@ -35,3 +35,10 @@ keybind = super+control+shift+alt+arrow_right=resize_split:right,100
 
 # Slowdown mouse scrolling
 mouse-scroll-multiplier = 0.95
+
+# Keymap
+macos-option-as-alt = left
+keybind = alt+j=unbind
+keybind = alt+k=unbind
+keybind = alt+h=unbind
+keybind = alt+l=unbind
