@@ -5,7 +5,7 @@ if not ok then
 end
 
 blink.setup({
-    opts = {
-        fuzzy = { implementation = "prefer_rust" }
+    fuzzy = {
+        implementation = "lua",
     }
 })
