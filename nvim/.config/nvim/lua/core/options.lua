@@ -49,6 +49,12 @@ opt.incsearch      = true          -- Show matches as you type
 opt.inccommand     = "nosplit"     -- Live preview of :substitute
 
 -- -----------------------------------------------------------------------------
+-- Folding
+-- -----------------------------------------------------------------------------
+opt.smoothscroll = true
+
+
+-- -----------------------------------------------------------------------------
 -- Grep  (prefer ripgrep when available)
 -- -----------------------------------------------------------------------------
 if vim.fn.executable("rg") == 1 then

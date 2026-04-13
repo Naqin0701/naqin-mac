@@ -56,10 +56,6 @@ map("n", "<leader>dq", function() vim.diagnostic.setloclist()  end, { desc = "Di
 -- Insert mode
 -- -----------------------------------------------------------------------------
 
--- Fast escape
-map("i", "jk", "<Esc>", { desc = "Exit insert mode" })
-map("i", "kj", "<Esc>", { desc = "Exit insert mode" })
-
 -- -----------------------------------------------------------------------------
 -- Visual / Visual-block mode
 -- -----------------------------------------------------------------------------
