@@ -1,8 +1,8 @@
 vim.lsp.enable({
-    -- lua
-    "lua_ls",
-    "stylua",
-    -- python
-    "basedpyright",
-    "ruff",
+	-- lua
+	"lua_ls",
+	"stylua",
+	-- python
+	"basedpyright",
+	"ruff",
 })

@@ -32,32 +32,31 @@ opt.sidescrolloff = 8 -- Keep N columns left/right of the cursor
 -- -----------------------------------------------------------------------------
 -- Indentation & Whitespace
 -- -----------------------------------------------------------------------------
-opt.tabstop        = 4             -- Visual width of a <Tab> character
-opt.softtabstop    = 4             -- Spaces inserted/deleted on <Tab>/<BS>
-opt.shiftwidth     = 4             -- Spaces used for auto-indent
-opt.expandtab      = true          -- Use spaces instead of tabs
-opt.smartindent    = true          -- Context-aware auto-indenting
-opt.shiftround     = true          -- Round indent to a multiple of shiftwidth
+opt.tabstop = 4 -- Visual width of a <Tab> character
+opt.softtabstop = 4 -- Spaces inserted/deleted on <Tab>/<BS>
+opt.shiftwidth = 4 -- Spaces used for auto-indent
+opt.expandtab = true -- Use spaces instead of tabs
+opt.smartindent = true -- Context-aware auto-indenting
+opt.shiftround = true -- Round indent to a multiple of shiftwidth
 
 -- -----------------------------------------------------------------------------
 -- Search
 -- -----------------------------------------------------------------------------
-opt.ignorecase     = true          -- Case-insensitive search by default
-opt.smartcase      = true          -- Case-sensitive when query contains uppercase
-opt.hlsearch       = true          -- Highlight all search matches
-opt.incsearch      = true          -- Show matches as you type
-opt.inccommand     = "nosplit"     -- Live preview of :substitute
+opt.ignorecase = true -- Case-insensitive search by default
+opt.smartcase = true -- Case-sensitive when query contains uppercase
+opt.hlsearch = true -- Highlight all search matches
+opt.incsearch = true -- Show matches as you type
+opt.inccommand = "nosplit" -- Live preview of :substitute
 
 -- -----------------------------------------------------------------------------
 -- Folding
 -- -----------------------------------------------------------------------------
 opt.smoothscroll = true
 
-
 -- -----------------------------------------------------------------------------
 -- Grep  (prefer ripgrep when available)
 -- -----------------------------------------------------------------------------
 if vim.fn.executable("rg") == 1 then
-  opt.grepprg    = "rg --vimgrep --smart-case"
-  opt.grepformat = "%f:%l:%c:%m"
+	opt.grepprg = "rg --vimgrep --smart-case"
+	opt.grepformat = "%f:%l:%c:%m"
 end

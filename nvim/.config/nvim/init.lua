@@ -10,13 +10,11 @@
 --   5. plugins/init      - plugin manager bootstrap
 -- =======================================================================
 
-
 -- Guard: abort early on unsupportes Neovim versions
 if vim.fn.has("nvim-0.12") == 0 then
 	vim.notify("This config requires Neovim >= 0.12", vim.log.levels.ERROR)
 	return
 end
-
 
 require("core.options")
 require("core.keymaps")
