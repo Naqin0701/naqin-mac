@@ -28,6 +28,8 @@ vim.pack.add({
 	"https://github.com/nvim-mini/mini.icons",
 	-- auto pairs
 	"https://github.com/windwp/nvim-autopairs",
+	-- transparent background
+	"https://github.com/xiyaowong/transparent.nvim",
 })
 
 -- plugins
@@ -40,6 +42,7 @@ require("plugins.plug-indent_blankline")
 require("plugins.plug-treesitter")
 require("plugins.plug-mini_icon")
 require("plugins.plug-autopairs")
+require("plugins.plug-transparent")
 
 -- schemes
 require("plugins.scheme-setup")
