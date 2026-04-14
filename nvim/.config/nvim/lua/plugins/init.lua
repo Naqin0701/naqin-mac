@@ -26,6 +26,8 @@ vim.pack.add({
 	"https://github.com/nvim-treesitter/nvim-treesitter",
 	-- mini.icon icon lib
 	"https://github.com/nvim-mini/mini.icons",
+	-- auto pairs
+	"https://github.com/windwp/nvim-autopairs",
 })
 
 -- plugins
@@ -37,6 +39,7 @@ require("plugins.plug-conform")
 require("plugins.plug-indent_blankline")
 require("plugins.plug-treesitter")
 require("plugins.plug-mini_icon")
+require("plugins.plug-autopairs")
 
 -- schemes
 require("plugins.scheme-setup")
