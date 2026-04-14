@@ -20,11 +20,23 @@ vim.pack.add({
 	"https://github.com/saghen/blink.cmp",
 	-- Formatter
 	"https://github.com/stevearc/conform.nvim",
+	-- indent blank line
+	"https://github.com/lukas-reineke/indent-blankline.nvim",
+	-- tree sitter (archived at 20260404)
+	"https://github.com/nvim-treesitter/nvim-treesitter",
+	-- mini.icon icon lib
+	"https://github.com/nvim-mini/mini.icons",
 })
 
+-- plugins
 require("plugins.plug-oil")
 require("plugins.plug-lualine")
 require("plugins.plug-which-key")
 require("plugins.plug-blink")
 require("plugins.plug-conform")
+require("plugins.plug-indent_blankline")
+require("plugins.plug-treesitter")
+require("plugins.plug-mini_icon")
+
+-- schemes
 require("plugins.scheme-setup")

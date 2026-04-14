@@ -8,6 +8,10 @@ if not ok then
 	return
 end
 
-oil.setup()
+oil.setup({
+	columns = {
+		"icon",
+	},
+})
 
 vim.keymap.set("n", "<leader>e", "<cmd>Oil<CR>", { desc = "Oil file explorer" })
