@@ -30,8 +30,6 @@ vim.pack.add({
 	"https://github.com/windwp/nvim-autopairs",
 	-- transparent background
 	"https://github.com/xiyaowong/transparent.nvim",
-	-- markdown headling
-	"https://github.com/lukas-reineke/headlines.nvim",
 })
 
 -- plugins
@@ -45,7 +43,6 @@ require("plugins.plug-treesitter")
 require("plugins.plug-mini_icon")
 require("plugins.plug-autopairs")
 require("plugins.plug-transparent")
-require("plugins.plug-headlines")
 
 -- schemes
 require("plugins.scheme-setup")
