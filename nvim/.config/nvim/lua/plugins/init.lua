@@ -32,6 +32,8 @@ vim.pack.add({
 	"https://github.com/xiyaowong/transparent.nvim",
 	-- markdown render plugin
 	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
+	-- buffer line
+	"https://github.com/akinsho/bufferline.nvim",
 })
 
 -- plugins
@@ -46,6 +48,7 @@ require("plugins.plug-mini_icon")
 require("plugins.plug-autopairs")
 require("plugins.plug-transparent")
 require("plugins.plug-render_markdown")
+require("plugins.plug-bufferline")
 
 -- schemes
 require("plugins.scheme-setup")
