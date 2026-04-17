@@ -48,6 +48,10 @@
       "rev": "a065833f35a3a7cc3ef137ac88b5381da2ba302e",
       "src": "https://github.com/norcalli/nvim-colorizer.lua"
     },
+    "nvim-highlight-colors": {
+      "rev": "e2cb22089cc2358b2b995c09578224f142de6039",
+      "src": "https://github.com/brenoprata10/nvim-highlight-colors"
+    },
     "nvim-lspconfig": {
       "rev": "8a9378a822719346a0288fa004dab302ca3c0a8f",
       "src": "https://github.com/neovim/nvim-lspconfig"
