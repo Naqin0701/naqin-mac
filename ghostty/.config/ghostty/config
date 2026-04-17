@@ -1,7 +1,6 @@
 # Dynamic theme colors
-theme = Rose Pine
+theme = Liquid Carbon Transparent
 background-opacity = 0.85
-background-blur = 30
 
 # Font
 font-family = "JetBrainsMono Nerd Font"
