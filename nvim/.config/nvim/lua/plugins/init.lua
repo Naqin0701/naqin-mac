@@ -34,6 +34,10 @@ vim.pack.add({
 	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
 	-- buffer line
 	"https://github.com/akinsho/bufferline.nvim",
+	-- telescope
+	"https://github.com/nvim-telescope/telescope.nvim",
+	-- plenary
+	"https://github.com/nvim-lua/plenary.nvim",
 })
 
 -- plugins
@@ -49,6 +53,7 @@ require("plugins.plug-autopairs")
 require("plugins.plug-transparent")
 require("plugins.plug-render_markdown")
 require("plugins.plug-bufferline")
+require("plugins.plug-telescope")
 
 -- schemes
 require("plugins.scheme-setup")
