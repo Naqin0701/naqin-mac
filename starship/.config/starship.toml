@@ -1,76 +1,93 @@
 "$schema" = 'https://starship.rs/config-schema.json'
+
 add_newline = true
 
+[palette]
+teal   = "#7ac4cc"   # directory, golang, success_symbol, cyan (ANSI 6)
+gold   = "#ccac00"   # git_branch, rust, nodejs, yellow (ANSI 3)
+green  = "#559a70"   # git_status, lua, conda, green (ANSI 2)
+blue   = "#0099cc"   # python, blue (ANSI 4)
+red    = "#ff3030"   # error_symbol, red (ANSI 1)
+magenta = "#cc69c8"  # magenta (ANSI 5)，用于 rose 等
+white   = "#afc2c2"  # foreground / white (ANSI 7)
+black   = "#000000"  # black (ANSI 0)
+overlay  = "#303030"  # 终端背景色（badge 的背景）
+iris     = "#559a70"  # up_to_date、stashed、renamed、diverged（绿色调，正向）
+foam     = "#7ac4cc"  # ahead、diverged（青色调，前进）
+rose     = "#cc69c8"  # behind、diverged（品红色调，后退）
+gold_bg  = "#ccac00"  # untracked、modified、staged（黄色背景）
+
 format = """
-$directory $git_branch $git_status$python$rust$golang$lua$nodejs$conda
+$directory $git_branch $git_status $python$rust$golang$lua$nodejs$conda
 $character"""
 
 [character]
-success_symbol = "[❯](bold #7ac4cc)"
-error_symbol = "[❯](bold #ff3030)"
+success_symbol = "[❯](bold teal)"
+error_symbol   = "[❯](bold red)"
 
 [directory]
 truncation_length = 3
 truncate_to_repo = true
 truncation_symbol = "…/"
 format = "[$path]($style)"
-style = "#7ac4cc"
+style = "teal"
 home_symbol = "~"
 
 [directory.substitutions]
 Documents = "󰈙"
 Downloads = " "
-Music = " "
-Pictures = " "
+Music     = " "
+Pictures  = " "
 
 [git_branch]
 symbol = "  "
-format = "[$symbol$branch](bold #ccac00)"
+format = "[$symbol$branch](bold gold)"
 
 [git_status]
-format = "[($all_status$ahead_behind)]($style)"
-style = "#559a70"
+format = " [($all_status$ahead_behind)]($style)"
+style = "green"
+
 up_to_date = '[ ✓ ](bg:overlay fg:iris)'
-untracked = '[?\($count\)](bg:overlay fg:gold)'
-stashed = '[\$](bg:overlay fg:iris)'
-modified = '[!\($count\)](bg:overlay fg:gold)'
-renamed = '[»\($count\)](bg:overlay fg:iris)'
-deleted = '[✘\($count\)](style)'
-staged = '[++\($count\)](bg:overlay fg:gold)'
-ahead = '[⇡\(${count}\)](bg:overlay fg:foam)'
+untracked  = '[?\($count\)](bg:overlay fg:gold_bg)'
+stashed    = '[\$](bg:overlay fg:iris)'
+modified   = '[!\($count\)](bg:overlay fg:gold_bg)'
+renamed    = '[»\($count\)](bg:overlay fg:iris)'
+deleted    = '[✘\($count\)](style)'
+staged     = '[++\($count\)](bg:overlay fg:gold_bg)'
+
+ahead    = '[⇡\(${count}\)](bg:overlay fg:foam)'
 diverged = '⇕[\[](bg:overlay fg:iris)[⇡\(${ahead_count}\)](bg:overlay fg:foam)[⇣\(${behind_count}\)](bg:overlay fg:rose)[\]](bg:overlay fg:iris)'
-behind = '[⇣\(${count}\)](bg:overlay fg:rose)'
+behind   = '[⇣\(${count}\)](bg:overlay fg:rose)'
 
 [python]
 symbol = " 󰌠 "
-format = "[$symbol$version](bold #0099cc)"
+format = "[$symbol$version](bold blue)"
 detect_files = ["pyproject.toml", "setup.py", "__init__.py", ".python-version"]
 version_format = "v${raw}"
 
 [rust]
 symbol = " 󱘗 "
-format = "[$symbol$version](bold #ccac00)"
+format = "[$symbol$version](bold gold)"
 version_format = "v${raw}"
 
 [golang]
 symbol = " 󰟓 "
-format = "[$symbol$version](bold #7ac4cc)"
+format = "[$symbol$version](bold teal)"
 version_format = "v${raw}"
 
 [lua]
 symbol = " 󰢱 "
-format = "[$symbol$version](bold #559a70)"
+format = "[$symbol$version](bold green)"
 detect_files = ["*.lua", ".lua-version"]
 version_format = "v${raw}"
 
 [nodejs]
 symbol = " 󰌞 "
-format = "[$symbol$version](bold #ccac00)"
+format = "[$symbol$version](bold gold)"
 detect_files = ["package.json", ".nvmrc", "node_modules"]
 version_format = "v${raw}"
 
 [conda]
 symbol = "  "
-format = "[$symbol$environment](bold #559a70)"
+format = "[$symbol$environment](bold green)"
 ignore_base = true
-
