@@ -30,6 +30,8 @@ vim.pack.add({
 	"https://github.com/windwp/nvim-autopairs",
 	-- transparent background
 	"https://github.com/xiyaowong/transparent.nvim",
+	-- markdown render plugin
+	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
 })
 
 -- plugins
@@ -43,6 +45,7 @@ require("plugins.plug-treesitter")
 require("plugins.plug-mini_icon")
 require("plugins.plug-autopairs")
 require("plugins.plug-transparent")
+require("plugins.plug-render_markdown")
 
 -- schemes
 require("plugins.scheme-setup")
