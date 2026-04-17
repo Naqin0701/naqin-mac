@@ -1,6 +1,7 @@
 # Dynamic theme colors
 theme = Liquid Carbon Transparent
 background-opacity = 0.85
+background-blur = 5
 
 # Font
 font-family = "JetBrainsMono Nerd Font"
