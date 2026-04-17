@@ -38,6 +38,8 @@ vim.pack.add({
 	"https://github.com/nvim-telescope/telescope.nvim",
 	-- plenary
 	"https://github.com/nvim-lua/plenary.nvim",
+	-- color display
+	"https://github.com/norcalli/nvim-colorizer.lua",
 })
 
 -- plugins
@@ -54,6 +56,7 @@ require("plugins.plug-transparent")
 require("plugins.plug-render_markdown")
 require("plugins.plug-bufferline")
 require("plugins.plug-telescope")
+require("plugins.plug-colorizer")
 
 -- schemes
 require("plugins.scheme-setup")
