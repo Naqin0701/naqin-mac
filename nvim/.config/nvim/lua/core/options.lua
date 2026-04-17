@@ -17,6 +17,7 @@ opt.timeoutlen = 300 -- Key sequence timeout (ms)
 opt.ttimeoutlen = 10
 opt.confirm = true -- Ask before discarding unsaved changes
 opt.fileencoding = "utf-8"
+opt.autoread = true
 
 -- -----------------------------------------------------------------------
 -- UI
