@@ -18,7 +18,7 @@ rose     = "#cc69c8"  # behind、diverged（品红色调，后退）
 gold_bg  = "#ccac00"  # untracked、modified、staged（黄色背景）
 
 format = """
-$directory $git_branch $git_status $python$rust$golang$lua$nodejs$conda
+$directory $git_branch $git_status $python$rust$golang$lua$nodejs$conda 
 $character"""
 
 [character]
