@@ -9,7 +9,7 @@
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 # List files with colors and icons
-alias ls='eza --color=auto --icons=auto --group-directories-first'
+alias ls='eza --icons=auto --group-directories-first'
 
 # Long format with details and git status
 alias ll='eza -l -h --icons=auto --git --group-directories-first'
