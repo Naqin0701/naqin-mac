@@ -40,6 +40,8 @@ vim.pack.add({
 	"https://github.com/nvim-lua/plenary.nvim",
 	-- color display
 	"https://github.com/brenoprata10/nvim-highlight-colors",
+	-- pretty diagnostic
+	"https://github.com/folke/trouble.nvim",
 })
 
 -- plugins
@@ -57,6 +59,7 @@ require("plugins.plug-render_markdown")
 require("plugins.plug-bufferline")
 require("plugins.plug-telescope")
 require("plugins.plug-nvim-highlight-colors")
+require("plugins.plug-trouble")
 
 -- schemes
 require("plugins.scheme-setup")
