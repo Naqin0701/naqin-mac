@@ -27,7 +27,7 @@ opt.number = true -- Show absolute line numbers
 opt.relativenumber = true -- Show relative line numbers
 opt.signcolumn = "yes:1" -- Always show sign column (prevents jitter)
 opt.cursorline = true -- Highlight the current line
-opt.wrap = false -- Do not wrap long lines
+opt.wrap = true -- wrap long lines
 opt.scrolloff = 8 -- Keep N lines above/below the cursor
 opt.sidescrolloff = 8 -- Keep N columns left/right of the cursor
 
