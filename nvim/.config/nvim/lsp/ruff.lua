@@ -25,6 +25,9 @@ return {
 					"F401", -- unused-import（显示但不 autofix）
 					"F841", -- unused-variable
 					"E501",
+					"RUF001",
+					"RUF002",
+					"RUF003",
 				},
 			},
 
