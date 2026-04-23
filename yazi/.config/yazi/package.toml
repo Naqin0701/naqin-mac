@@ -1,7 +1,12 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "442d908"
+rev = "034efd6"
 hash = "384464b6df8cb807425c521f8cd790f3"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mime-ext"
+rev = "034efd6"
+hash = "ffa64f216083fb7333afc1ebbf73cc01"
 
 [flavor]
 deps = []
