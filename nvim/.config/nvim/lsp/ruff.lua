@@ -22,8 +22,9 @@ return {
 					-- "I"  -- 注释掉或不加，避免 import sorting
 				},
 				ignore = { -- 明确忽略不想看到的（可选）
-					-- "F401",  -- unused-import（显示但不 autofix）
-					-- "F841",  -- unused-variable
+					"F401", -- unused-import（显示但不 autofix）
+					"F841", -- unused-variable
+					"E501",
 				},
 			},
 
