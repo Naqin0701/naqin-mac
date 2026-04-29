@@ -72,6 +72,11 @@
       "rev": "0fd43fb4b1f073931c4b481f5f3b7cea3749e190",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
+    "rustaceanvim": {
+      "rev": "bc391bbb8db0dbf3e3e9fe8f9f03112ecbab7463",
+      "src": "https://github.com/mrcjkb/rustaceanvim",
+      "version": "9.0.0 - 10.0.0"
+    },
     "telescope.nvim": {
       "rev": "471eebb1037899fd942cc0f52c012f8773505da1",
       "src": "https://github.com/nvim-telescope/telescope.nvim"

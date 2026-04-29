@@ -60,6 +60,7 @@ require("plugins.plug-bufferline")
 require("plugins.plug-telescope")
 require("plugins.plug-nvim-highlight-colors")
 require("plugins.plug-trouble")
+require("plugins.plug-rustaceanvim")
 
 -- schemes
 require("plugins.scheme-setup")
