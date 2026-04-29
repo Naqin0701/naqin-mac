@@ -15,6 +15,7 @@ conform.setup({
 			-- To organize the imports.
 			"ruff_organize_imports",
 		},
+		zig = { "zig fmt" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
